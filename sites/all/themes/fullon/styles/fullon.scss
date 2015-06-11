@@ -1,0 +1,246 @@
+/* 
+ * ##### Sasson - advanced drupal theming. #####
+ *   
+ */
+
+@import "css3";
+@import "colors";
+
+$green: #b7d0a8;
+$violet: #330128;
+$pink: #DFCFDC;
+$form-bg: #FDFAFA;
+
+body {
+  //background: $body-bg;
+  font-family: arial;
+  //background: url("../images/text-fabric.jpg") repeat scroll 0 0 #F9F2F2;
+  color: $violet;
+}
+
+#header {
+  color: white;
+  padding-top: 10px; 
+  //@include linear-gradient(color-stops($header-start ,$header-finish), top);
+  //background: url("../images/text-paper-color.png") repeat-x $green;
+  background: url("../images/pink.jpg") repeat;
+  border-top: 10px solid $violet;
+  height: 55px;
+
+  a {
+    color: $hf-links;
+  }
+  // remove when u will receive a logo:
+  #site-name { float: right; margin:0; a{ text-decoration:none;}}
+}
+
+
+#main-wrapper {
+  min-height: 300px;
+  background: url("../images/lace.png") repeat-x scroll right bottom transparent;
+  padding: 45px 0;
+}
+
+#footer {
+  border-bottom: 10px solid $violet;
+  background: url("../images/footer.jpg") repeat scroll 0 0 transparent;
+  height: 60px;
+  padding: 4px 0 0;
+  #footer-inner {
+    color: $hf-text;
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    a {top
+      color: $hf-links;
+    }
+  }
+}
+
+
+#sidebar-first {
+  background: url("../images/dash-vert-main.png") repeat-y scroll left 0 transparent;
+  .block { margin: 20px 0 30px 20px; }
+}
+
+h1#page-title {
+    background: url("../images/leaves-hor.png") no-repeat scroll 0 100% transparent;
+    border-bottom: 1px dashed #EBCECE;
+    line-height: 0.8em;
+    margin: 0;
+    min-height: 50px;
+    padding: 27px 0 18px;
+    text-shadow: 0 0 1px #9C5AF0;
+    width: 100%;
+}
+
+#sidebar-first form, .page-contact form {
+  background-color: $form-bg;
+  border: 1px solid #CBF2F4;
+  clear: both;
+  padding: 20px;
+  input {
+    background-color:transparent; 
+    border-style: dashed;
+    border-width: 0 0 1px;
+    border-color:$green;
+    //color: #9C5AF0;
+    color:#000;
+    font-size: 16px;
+    //font-weight: bold;
+    padding: 5px 0;
+    width: 100%;
+    &.form-submit {
+      background-color: #ADF7EB;
+      border: none;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 12px;
+      //font-weight: normal;
+      margin: 0 0 0 0.5em;
+      padding: 4px 8px;
+      width:auto;
+    }
+  }
+}
+
+
+/** BLOCKS **/
+#block-system-main-menu {
+  ul { 
+    float: left;
+    height:42px;
+    margin:0; padding:0;
+    //background: url("../images/dash-vert-color.png") repeat-y scroll right center transparent;
+     
+    li {
+      float: right;
+      height: 55px;
+      //line-height: 1em;
+      list-style: none;
+      margin: 0;
+      padding: 0 8px 0 6px;
+      //background: url("../images/dash-vert-color.png") repeat-y scroll left center transparent;
+      a { 
+        display: block;
+        padding: 10px 0;
+        //padding: 35px 0 25px;
+        width: 160px;
+        //width:137px;
+        font-size: 22px; 
+        color: white;
+        text-decoration:none;
+        text-align: center;
+        //text-shadow: 0 0 1px $violet;
+        line-height: 1em;
+        font-weight: bold;
+      }
+      &.active-trail {
+        background: url("../images/ribbon-color-bottom.png") no-repeat scroll right bottom transparent;
+        //color: #DFCFDC;
+        padding: 0 0 25px 0;
+        //text-shadow: 0 0 1px #DFCFDC;
+        height:60px;
+        a {
+          background: url("../images/ribbon-color.png") repeat scroll right top;
+          margin-top: -15px;
+          padding: 25px 0;
+          //color: $pink;               
+        }
+      }
+    }
+  }
+}
+
+#block-views-blog-block-1 {
+  .views-row { 
+    padding: 0; margin:0; 
+    background: url("../images/sprite-color.png") no-repeat scroll 110% -1189px transparent;
+    padding: 10px 45px 10px 0px;   
+    border-bottom: 1px dashed #CCCCCC;
+  }
+  .views-field-title { padding:0; border:none; a { font-size:14px; font-weight:normal;} }
+  .date-display-single { line-height: 1em; font-size:12px;}
+}
+
+/** VIEWS **/
+.view-blog {
+  .views-row {
+    clear:both;
+    //background-color: #FDFAFA;
+    //border: 1px solid #CBF2F4;
+    padding: 20px;
+    margin: 20px 0;
+    .views-field-title { 
+      padding-bottom:16px; 
+      border-bottom: 1px solid $violet;
+      a { color:$violet; font-size:20px; font-weight:bold; text-decoration:none; }
+    }
+    .views-field-comments-link {
+      background: url("../images/ribbon-color.png") repeat-y scroll left top $violet;
+      color: $pink;
+      float: right;
+      font-size: 11px;
+      line-height: 14px;
+      margin-bottom: 20px;
+      width: 160px;
+      //padding: 10px;
+      
+      .date-display-single {
+        padding: 0px 15px;
+        line-height:2em;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAE4CAMAAABYN+LaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJQTFRF9PT0vr6+vb29yMjIu7u7vLy8ycnJxsbG3d3d0tLS1NTUs7Oz0dHRx8fH09PTr6+vubm58/Pzurq6sLCw////AAAAZhNbsgAAABZ0Uk5T////////////////////////////AAHSwOQAAADMSURBVHja7NfZDoMgEAXQAde61C6X///VziDgWGP61vZhCEGPgcGE5EYphICQBtoB4CsRDwCDQgVU8pj71t4RF0sXeAcX+9m0tZrzMocO1YJqBoPB8B2kHGoFKo8U0GngFO1JgS6V3jYlDQ7byY7EYDD8DQj3ggtn15QxMIaMJ2P5XG2GfE7quKWIOQVktcveA/p039v5GAyGHyAGkMugkTPxljDKHzDqFdcI+LJGWsN4FDkuXRd53qdG/jqUTb1GaDR4pn63Jo4vAQYAnEUuMSYH4rgAAAAASUVORK5CYII=") no-repeat scroll right 0 transparent;        
+      }
+      .comment_count,.links {
+        padding: 0px 15px;
+        line-height:2em;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAE4CAMAAABYN+LaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJQTFRF9PT0vr6+vb29yMjIu7u7vLy8ycnJxsbG3d3d0tLS1NTUs7Oz0dHRx8fH09PTr6+vubm58/Pzurq6sLCw////AAAAZhNbsgAAABZ0Uk5T////////////////////////////AAHSwOQAAADMSURBVHja7NfZDoMgEAXQAde61C6X///VziDgWGP61vZhCEGPgcGE5EYphICQBtoB4CsRDwCDQgVU8pj71t4RF0sXeAcX+9m0tZrzMocO1YJqBoPB8B2kHGoFKo8U0GngFO1JgS6V3jYlDQ7byY7EYDD8DQj3ggtn15QxMIaMJ2P5XG2GfE7quKWIOQVktcveA/p039v5GAyGHyAGkMugkTPxljDKHzDqFdcI+LJGWsN4FDkuXRd53qdG/jqUTb1GaDR4pn63Jo4vAQYAnEUuMSYH4rgAAAAASUVORK5CYII=") no-repeat scroll right -96px transparent;
+        li {
+          padding:0;
+          a { color:$pink; text-decoration:none;  }
+        }
+      }
+      .meta_data {
+        background: url("../images/ribbon-color-bottom.png") no-repeat scroll right bottom transparent;
+        padding: 10px 10px 47px;
+        width: 140px;
+      }
+    }
+    .views-field-body {
+      margin-right: 160px;
+      padding-right: 20px;
+      padding-top: 7px;
+    }
+  }
+}
+
+
+/** ADMIN **/
+.tabs ul.primary {
+    border: medium none;
+    float: right;
+    font-size: 11px;
+    margin: 0 0 20px;
+    opacity: 0.75;
+    padding: 0;
+    width: 100%;
+}
+.tabs ul.primary li a {
+    background: none repeat scroll 0 0 $violet;
+    border: medium none;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    height: 29px;
+    line-height: 30px;
+    margin: 0;
+    min-width: 75px;
+    padding: 0;
+    text-align: center;
+}
+ul.primary li.active a {
+    background: none repeat scroll 0 0 $green;
+    border: medium none;
+    color: #FFFFFF;
+    float: right;
+    font-weight: bold;
+  }

@@ -1,0 +1,1392 @@
+/* #############################################
+ * ##### Sasson - advanced drupal theming. #####
+ * #############################################
+ *   
+ * SITENAME theme main stylesheet.
+ * 
+ *  Index
+ *  -----------
+ *  1. Imports and Definitions
+ *  2. General Sitewide Styles
+ *    -- Layout
+ *    -- General Styles
+ *    -- Typography
+ *    -- Links 
+ *    -- Header
+ *    -- Sidebars
+ *    -- Footer
+ *  3. Front Page
+ *  4. Inner Pages
+ *  5. Forms
+ * 
+ */
+
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+// @import "compass/css3";           // Uncomment to use CSS3 mixins (http://compass-style.org/reference/compass/css3/)
+// @import "960/grid";               // Uncomment to use 960gs mixins (see Sasson's layout partials for examples)
+// @import "salsa/salsa";             // Uncomment to use gridy mixins (the layout system powering Sasson v3.x)
+// @import "partials/mixins";        // Uncomment to call your own mixins partial (check your /partials directory)
+// @import "sprites/smart";          // Uncomment to call your 'smart' sprite (check your /images/sprites directory)
+
+@font-face {
+  font-family: archiologregular;
+  src: url('../font/archiologregular.eot?') format('eot'), url('../font/archiologregular.woff') format('woff'), url('../font/archiologregular.ttf') format('truetype');
+}
+
+$red: #8064a2;
+$blue: #87bcc1;
+$red: #b13b24;
+$bg: #F3EEE5;
+$brown: #775A3D;
+
+
+@mixin button {
+    background-color: $blue;
+    color: white;
+    font-family: archiologregular;
+    font-size: 19px;
+    padding: 1px 12px;
+    border-radius: 7px
+}
+
+a,
+a:hover,
+a.active,
+a:visited{
+		color: $red;
+		text-decoration: none;
+}
+
+
+.comment a.permalink{
+		display: none;
+}
+ 
+#logo{
+    height: 111px;
+        width:100%;
+        margin-top:63px;
+        img{
+          float:left;
+        }
+}
+
+#header{
+      background: url("../images/menu-back.png") repeat-x scroll 0 98% transparent;
+     margin: 0;
+    width: 27%;
+}
+
+
+
+#page{
+     /* background: url("../images/main-back.jpeg") repeat scroll 0 0 transparent;*/
+     background-color: $bg;
+     color: $brown;
+}
+
+  #sidebar-second .block-title,
+  #sidebar-first .block-title,
+  .region-content-bottom .block-title{
+      margin:0;
+      text-align: center;
+      font-size: 20px;
+      font-family: archiologregular;
+      color:#fff;
+      padding: 5px;
+  }
+
+
+
+.title{
+        font-family: archiologregular;
+      color:$red;
+}
+
+
+#sidebar-first .block,
+#sidebar-second .block{
+  background: url("../images/blue.png") repeat 0 0 transparent;
+  border-radius: 15px;
+  margin-bottom: 14px;
+    margin-right: -33px;
+    width: 250px;
+  .block-footer{
+    background: url("../images/bottom-red.png") repeat-x 0 0 transparent;
+    height: 33px;
+  }
+}
+
+.one-sidebar.sidebar-first #main {
+    width: 65%;
+}
+
+.one-sidebar.sidebar-first #sidebar-first {
+    right: -64%;
+    top: 31px;
+}
+
+.one-sidebar.sidebar-first #main {
+    right: 30%;
+}
+
+.region-content-bottom{
+  clear: both;
+}
+
+ /* 
+  * footer
+  *
+  ***********************************************************/
+
+    #footer {
+    border-top: 1px solid;
+    margin-top:15px;
+    font-size: 12px;
+    a{
+      color:$brown;
+    }
+}
+
+#block-block-2{
+  float:left;
+}
+
+#block-block-16{
+  float:left;
+  clear: both;
+  margin-bottom: 10px;
+}
+#block-block-8{
+  float:right;
+}
+ /* 
+  * Home page
+  *
+  ***********************************************************/
+
+.front.one-sidebar.sidebar-second #main {
+    width: 62.5%;
+}
+
+.front #sidebar-second{
+  position: relative;
+  left: 32px!important;
+  float: left;
+}
+
+.front .register-block{
+    background: url("../images/blue.png") repeat 0 0 transparent;
+    border-radius: 15px;
+    .block-footer{
+        background: url("../images/bottom-red.png") repeat-x 0 0 transparent;
+    }
+    #send input{
+      margin: -18px 32px 27px 0px !important;
+      display: block;
+    }
+    tr{
+      float: right;
+      padding: 28px 11px 0 0;
+    }
+}
+
+#block-views-blog-block-4,
+#block-block-6,
+#block-block-7{
+  float:right;
+  margin-top: 17px;
+  width:270px;
+  margin-right: -50px;
+  background: url("../images/red.png") repeat 0 0 transparent;
+  border-radius: 15px;
+  .views-field-field-image{
+    margin-right: 20px;
+  }
+  .views-field-title{
+    margin:0;
+    text-align: center;
+    width: 250px;
+  }
+    a{
+      color: #efe8dc;
+  }
+}
+ 
+.front #block-views-blog-block-4,
+.front #block-block-6,
+.front #block-block-7{
+    margin-right: 36px;
+    height: 208;
+      .views-field-field-image{
+    margin-right: 28px;
+  }
+    .views-field-title{
+    width: 270px;
+  }
+  }
+
+.front #block-block-7 .rtecenter{
+  height: 123px;
+}
+
+#block-block-6 img{
+     margin-bottom: -6px;
+    margin-top: -22px;
+ }
+#block-views-blog-block-4 .views-field-title{
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+  .block-footer{
+    background: url("../images/bottom-blue.png") repeat-x 0 0 transparent;
+    height: 33px;
+    margin-top: -7px;
+  }
+
+
+.front .field-name-field-video{
+  margin-right:30px;
+  margin-top: 15px;
+}
+
+.front .field-name-body{
+    margin-right:30px;
+    p{
+      margin: 7px 0;
+    }
+  }
+
+
+#block-views-homepage-banner-block{
+  background: none!important;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+ /* 
+  * Main menu
+  *
+  ***********************************************************/
+
+#main-menu {
+    background: url("../images/menu-back.png") repeat scroll right 0 transparent;
+    height: 59px;
+    margin: 7px 0 24px;
+    padding-top: 39px;
+    width: 73%;
+    a{
+      border-left: 1px solid $brown;
+      color: $brown;
+      font-family: archiologregular;
+      font-size: 21px;
+      padding-left: 9px;
+    }
+    li{
+      padding-left: 0px;
+    }
+    a.active{
+      color: $red;
+    }
+    li.last a{
+      border:none;
+    }
+}
+
+#block-block-11{
+    float: left;
+    font-family: archiologregular;
+    font-size: 20px;
+    left: 10px;
+    margin-bottom: -97px;
+    position: relative;
+    text-align: left;
+    top: 10px;
+    clear:both;
+}
+
+
+ /* 
+  * search
+  *
+  ***********************************************************/
+#block-search-form.block{
+     background: none;
+     margin-top: 15px;
+}
+
+#search-block-form input#edit-submit.form-submit{
+    @include button;
+    border: medium;
+    position: relative;
+    top: -2px;
+    right: 5px;
+   }
+
+#search-block-form input.form-text{
+  width:174px;
+}
+ /* 
+  * User menu
+  *
+  ***********************************************************/
+
+#block-block-1{
+    float:left;
+    text-align: left;
+}
+
+#block-system-user-menu{
+    float:left;
+    margin-left: 15px;
+       ul{
+      padding:0;
+    }
+       li a{
+      display: block; 
+      @include button;
+      margin-left: -8px;
+    }
+}
+
+#block-system-user-menu li {
+    display: inline;
+    list-style: none outside none;
+    float: left;
+}
+
+#block-block-22{
+      @include button;
+      background-color: $red;
+      float: right;
+      margin-top: 18px;
+      margin-right: 14px;
+      position: absolute;
+      p{
+        margin: 0;
+      }
+      a{
+          color: #fff;
+      }
+}
+
+ /* 
+  * Comments
+  *
+  ***********************************************************/
+
+#comment-form.comment-form fieldset .fieldset-wrapper, article.comment .comment_forbidden{
+  display: none;
+  }
+
+li.comment-add{
+    padding: 0 !important;
+    a{
+      color: $red;
+      font-size: 18px;
+    }
+}
+
+#comments.comment-wrapper article.comment{
+  border:1px solid $red;
+  border-radius: 10px;
+  padding:10px;
+  margin-bottom: 13px;
+}
+
+#comments.comment-wrapper ul li a{
+  background-color: $red;
+  padding: 5px 10px;
+  color: #fff;  
+  border-radius: 7px;
+}
+ /* 
+  * Contact us
+  *
+  ***********************************************************/
+
+#node-24 .webform-client-form input{
+  width:400px;
+}
+
+.webform-client-form input#edit-submit{
+    background-color: $red;
+    border: medium none;
+    color: #FFFFFF;
+    left: 100px;
+    padding: 5px 10px;
+    width: auto;
+    border-radius: 5px;
+
+}
+
+#node-24 .webform-client-form input#edit-submit{
+  float:left;
+}
+
+.webform-client-form input#edit-submitted-name{
+    margin-right:12px;
+}
+
+.webform-client-form input#edit-submitted-phone{
+  margin-right: 12px;
+}
+
+.webform-client-form #webform-component-message label{
+  float:right;
+  margin-right:13px;
+}
+
+.webform-client-form textarea{
+  width:406px;
+  margin-right:67px;
+}
+
+.webform-client-form .grippie{
+  width:404px;
+  margin-right:67px;
+}
+
+.webform-client-form label{
+  font-weight: normal;
+}
+
+.webform-client-form #edit-actions{
+    width:473px;
+}
+
+ /* 
+  * Blog
+  *
+  ***********************************************************/
+.node-article p{
+  margin: 0;
+}
+#block-views-blog-block-3 img{
+  		float:right;
+  		    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#block-views-blog-block-3 .views-field-field-blog-date{
+	margin-top: 5px;
+  float:right;
+  	margin-left: 20px;
+      @include button;
+}
+
+#block-views-blog-block-3 .views-row{
+	height: 178px;
+   	border-bottom: 1px solid $blue;
+}
+
+#block-views-blog-block-3 .views-field-field-teaser-blog{
+		margin-top: 10px;
+		height: 110px;
+}
+
+#block-views-blog-block-1 .views-field-title,
+#block-views-blog-block-2 .views-field-name{
+    border-bottom: 1px dashed;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 4px 10px;
+     padding-bottom: 4px;
+}
+
+#block-views-blog-block-2 .views-field-subject{
+    font-size: 15px;
+    margin: 4px 10px;
+    font-weight: bold;
+}
+
+#block-views-blog-block-1 .views-row-5 .views-field-title,
+#block-views-blog-block-2 .views-row-5 .views-field-name{
+  border:none;
+}
+
+ /* 
+  * table
+  *
+  ***********************************************************/
+
+  table{
+      width:100%;
+        }
+
+  tr.even, tr.odd {
+    background-color: #fff;
+  }
+
+ /* 
+  * Social Media
+  *
+  ***********************************************************/
+
+  #block-widgets-s-shoam{
+      float:left;
+      .twitter-share-button{
+        width: 70px !important;
+        position: relative;
+        right: 35px;
+      }
+      .addthis_button_google_plusone{
+         width: 70px !important;
+      }
+      .addthis_button_facebook_like{
+        position: relative;
+        right: 30px;
+      }
+  }
+
+ /* 
+  * courses
+  *
+  ***********************************************************/
+
+  #block-views-og-nodes-block-1{
+  float:right;
+  margin-right: 40px;
+   .block-title{
+      font-size: 20px;
+      font-family: archiologregular;
+      color:$red;
+  }
+  img{
+    margin-right: 30px;
+  }
+/*  .views-field-title a{
+    display: block;
+      text-align: center;
+  }
+*/
+  td{
+    float: right;
+    margin-left: 64px;
+    width: 160px;
+    margin-bottom: 20px;
+  }
+  td.col-last{
+    margin-left: 0;
+  }
+}
+
+  #block-block-12, .content .field-name-field-ink-register {
+    display: block;
+    float:left;
+    background: url("../images/blue.png") repeat scroll 0 0 transparent;
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px;
+    clear: both;
+  }
+
+.node-type-lesson #modal-title, .node-type-lesson .comment-add, .node-type-lesson #comments{
+  display: none;
+}
+
+#block-views-faq-lesson-block{
+  p{
+    margin: 0;
+  }
+  .views-label{
+    float: right;
+    margin-left: 5px;
+    color: $red;
+    font-weight: bold;
+  }
+  h2{
+    color: $red;
+    font-size: 28px;
+  }
+  .views-row{
+    border-bottom: 1px solid $brown;
+    clear: both;
+    padding-top: 16px;
+      }
+    .views-row-last{
+      border: none;
+    }
+} 
+
+.add-q{
+    @include button;
+    font-size: 22px;
+    margin-right: 48px;
+  }
+
+.button-q{
+    background: url("../images/bullet2.png") no-repeat scroll right center transparent;
+    margin-top: 18px;
+}
+
+
+/* 
+  * newsletter
+  *
+  ***********************************************************/
+
+#newsletter  tbody{
+    border-top:none;
+}
+
+
+#newsletter td{
+  font-weight: bold;
+  padding-right:10px;
+}
+
+#newsletter input{
+    width: 132px;
+}
+
+#newsletter #send input{
+  border:none;
+  background-color: $red;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 15px 7px;
+  margin-bottom: 22px;
+  width:auto;
+  margin-top:10px;
+}
+
+#newsletter-content{
+    background: url("/sites/all/themes/shoham/images/blue.png") repeat scroll 0 0 transparent;
+    border-radius: 15px 15px 15px 15px;
+    margin: 0 auto;
+    width: 500px;
+    padding-top:15px;
+    input {
+    width: 169px;
+  }
+    #send{
+         margin: 10px auto 0;
+         width: 232px;
+         input{
+          width:auto;
+         }
+    }
+  }
+
+#newsletter-content .block-footer{
+    background: url("../images/bottom-red.png") repeat-x 0 0 transparent;
+    height: 33px;
+  }
+
+#node-77 #newsletter-content{
+    padding-top: 17px;
+    width: 339px;
+
+}
+
+#node-77 #newsletter-content #send {
+    width: 142px;
+}
+
+#node-7217 #newsletter-content #send {
+    width: 168px;
+}
+
+#node-53 #newsletter-content #send {
+    width: 53px;
+}
+
+#node-100 #newsletter-content {
+    width: 345px;
+}
+
+#node-53 #newsletter-content {
+    width: 522px;
+}
+
+#node-100 #newsletter-content #send {
+  margin: -16px auto 0;
+    width: 57px;
+}
+
+#node-129 #newsletter-content {
+    width: 330px;
+}
+
+#node-129 #newsletter-content #send {
+    width: 69px;
+}
+
+#node-138 #newsletter-content {
+    width: 410px;
+}
+
+#node-138 #newsletter-content #send {
+    width: 93px;
+}
+
+ /* 
+  * lesson page
+  *
+  ***********************************************************/
+/*
+.node-type-lesson #block-block-1 {
+margin-top: 9px;}
+
+
+.node-type-lesson #block-block-11 {
+    top: 35px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.node-type-lesson #header{
+  margin-top: 57px;
+}
+}
+*/
+.node-type-lesson, .node-hadracha{
+  .field-name-field-pdf-file object{
+  margin-right:67px;
+}
+  .field-name-field-youtube-video iframe{
+   margin-bottom: 12px;
+    margin-right: 67px;  }
+    .field-type-video object{
+   margin-bottom: 12px;
+    margin-right: 150px;  }
+    .field-name-field-new-video-lesson{
+      margin-bottom: 12px;
+          margin-right: 150px;
+
+    }
+}
+
+.field-name-field--pdf object{
+    margin-right:67px;
+
+}
+
+.field-name-field-pdf-close .download-file{
+  margin-bottom: 10px;
+}
+ /* 
+  * recommendation
+  *
+  ***********************************************************/
+
+#recommendation-node-form.node-form fieldset{
+  display:none;
+}
+
+#block-views-recommendation-block.block .views-row{
+  border:1px solid $red;
+  border-radius: 10px;
+  padding:10px;
+  margin-bottom: 13px;
+}
+
+#block-views-recommendation-block.block .view-header a{
+  @include button;
+}
+
+ /* 
+  * list of courses
+  *
+  ***********************************************************/
+
+#block-views-nodequeue-1-block.block td, #block-views-cource-place-block td{
+    background: url("/sites/all/themes/shoham/images/blue.png") repeat scroll 0 0 transparent;
+    border-radius: 15px 15px 15px 15px;
+    float: right;
+    height: 68px;
+    margin-bottom: 40px;
+    margin-right: 77px;
+    padding: 10px;
+    text-align: center;
+    width: 189px;
+}
+
+#block-views-cource-place-block td a{
+   display: block;
+    color: white;
+  font-size: 18px;
+    font-family: archiologregular;
+    line-height: 14px;
+  }
+#block-views-cource-place-block .title{
+    font-size: 24px;
+    margin:10px 0;
+}
+
+
+#block-views-cource-place-block{
+  margin-top: 93px;
+}
+
+#block-views-cource-place-block-1{
+  clear: both;
+}
+
+#block-views-cource-place-block-1 h2{
+  color: $red;
+  text-align: right;
+}
+
+.node-type-mikum-course .comment-add{
+  display: none;
+}
+
+#block-views-cource-place-block-1, #block-views-cource-place-block{
+  .views-field-view-node{
+    text-align: center;
+  }
+  thead .views-field, tbody{
+    text-align: center;
+  }
+  input#edit-submit-cource-place{
+    margin-top: 21px;
+  }
+} 
+
+.node-type-mikum-course #comments{
+  display: none;
+}
+
+.field-name-field-register-user {
+   .views-field-comment-body p{
+  margin: 0;
+}
+  .views-field-field-mail-rishum{
+    width: 20%;
+  }
+  .views-field-field-mobile{
+    width: 20%;
+  }
+  .views-field-name{
+    width: 20%;
+
+  }
+}
+ /* 
+  * moadon
+  *
+  ***********************************************************/
+
+#block-views-hadrachot-block-1 .views-field-title,
+#block-views-hadrachot-block-2 .views-field-title{
+    display: block;
+    margin: 0;
+    text-align: center;
+    width: 200px;
+}
+
+#block-views-hadrachot-block-1 .views-field-view-node,
+#block-views-hadrachot-block-2 .views-field-view-node,
+#block-views-hadrachot-block-1 .views-field-field-hadracha-month,
+#block-views-hadrachot-block-2 .views-field-field-hadracha-month{
+  text-align: center;
+  width: 200px;
+}
+
+#block-views-hadrachot-block-1 .views-field-field-hadracha-month,
+#block-views-hadrachot-block-2 .views-field-field-hadracha-month{
+ .views-label, .field-content{
+  display:inline;
+}
+}
+
+#block-views-hadrachot-block-1 td,
+#block-views-hadrachot-block-2 td{
+    display: block;
+    float: right;
+    width: 206px;
+    margin-bottom: 33px;
+}
+
+.field-name-field-sirton-hadracha{
+    margin:0 auto;
+    width: 655px;
+}
+
+.video-embed-description{
+  width:655px;
+  text-align: center;
+}
+
+#block-views-link-course-block{
+  @include button;
+  margin-bottom: 16px;
+  float:left;
+}
+
+#mediafront_default, #mediafront_default_1, #mediafront_default_2{
+   margin: 0 auto 20px;
+   right: -4px;
+   clear: both;
+  }
+
+ /* 
+  * facebook for the home page
+  *
+  ***********************************************************/
+
+  #block-views-facebook-block, #block-views-facebook-block-2, {
+    width:80%;
+    .picture{
+      float:right;
+      margin-left:30px;
+      position: absolute;
+    }
+    .title{
+    font-size: 14px;
+    margin-right: 77px;
+    color: $red;
+        }
+        .sirton, .image{
+              margin-right: 77px;
+
+        }
+    .body{
+    color: $brown;
+    font-size: 13px;
+    font-weight: normal;
+    min-height: 55px;
+        margin-right: 77px;
+        p{
+          margin: 0;
+        }
+
+    }
+    .add-comment{
+      float:right;
+      font-size: 15px;
+      font-weight: normal;
+      color:#c4bcba;
+      clear:both;
+        a{
+    color: #EDA894;
+    margin-left: 10px;
+        }
+      }
+      .date{
+        float:right;
+        font-size: 15px;
+        font-weight: normal;
+        color:#c4bcba;
+        margin-right:7px;
+      }
+    .field-content{
+    float: right;
+    margin-right: 100px;
+    width: 460px;
+        clear:both;
+    margin-bottom:10px;
+    background-color: #c4bcba;
+    }
+    .comment-body{
+    background-color: white;
+    float: right;
+    margin-top: 6px;
+    padding: 1px 10px 1px 10px;
+    margin-left: 7px;
+    width:379px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    }
+    .comment-picture{
+      float:right;
+      margin: 6px;
+    }
+    h3{
+      clear: both;
+      border-top: 2px solid $blue;
+      padding-top:15px;
+      min-height: 50px;
+      margin-top:30px;
+          }
+    .comment-name{
+      color: $red;
+      font-weight: bold;
+    }
+
+  }
+
+  
+
+.node-status .content{
+  display: none;
+}
+
+#facebook{
+  .field-name-field-status-body fieldset .fieldset-wrapper{
+    display: none;
+  }
+  .field-name-field-status-body{
+          width:315px;
+      margin-left: 27px;
+      float:right;
+    .form-item{
+      margin-top:0;
+    }
+    fieldset{display: none;}
+  }
+  .field-name-field-image-status{
+    label{
+      display: none;
+    }
+           .form-item{
+      margin-top:0;
+          width:340px;
+
+    }
+    } 
+  thead th, .tabledrag-toggle-weight{
+    display: none;
+  }
+  tbody tr{
+    background-color: #f3eee5;
+      .image-widget-data{
+    font-size: 10px;
+  }
+  }
+
+  .field-name-field-status-sirton{
+    clear: both;
+    label{
+      display: none;
+    }
+  }
+  .pane-node-form-publishing{
+    display: none;
+  }
+}
+
+
+#block-block-19 .content a{
+      @include button;
+      float: left;
+}
+
+/* harshama  */
+
+
+#block-views-mikun-course-block, #block-views-mikun-course-block-1, #block-views-mikun-course-block-2{
+  width: 70%;
+  font-size:18px;
+  line-height: 34px;
+}
+
+.node-type-list-harshama{
+  .comment-add, .comment{
+    display: none;
+  }
+  #comment-form-wrapper h2, #edit-author--2, #edit-author, .form-item-name, .comment-wrapper h2{
+    display: none!important;
+  }
+}
+
+.page-node-7098 .messages{
+  display: none;
+}
+
+.player-ui .minplayer-controls-volume-vertical .minplayer-default-volume-slider {
+    left: -8px !important;
+}
+
+#yoxview_menuPanel, #yoxview_infoPanel, #yoxview .yoxview_ctlBtn{
+  display: none !important;
+}
+
+.flippy{
+    float: left;
+    margin: -55px 0 0 -10px;
+    padding: 0;
+      a{
+    @include button;
+  }
+}
+
+/*   Calendar  */
+
+#block-views-calendar-block{
+  h3{
+    font-family: archiologregular;
+
+  }
+  .monthview{
+    text-align: right;
+  }
+  .view-header p{
+    text-align: center;
+    font-size: 1.7em;
+        font-family: archiologregular;
+        font-weight: bold;
+        margin: 0;
+
+
+  }
+}
+
+.view .date-nav-wrapper .date-next{
+    background-color: #f3eee5;
+}
+
+.view .date-nav-wrapper .date-prev{
+     background-color: #f3eee5;
+}
+
+.block-views .view .date-nav-wrapper .date-prev {
+    left: auto;
+    right: 0;
+    margin-right: 0;
+}
+
+.block-views .view .date-nav-wrapper .date-next {
+    right: auto;
+    left: 0;
+}
+
+.calendar-calendar .month-view .full tr td.single-day.today{
+  border-bottom: 2px solid #B13B24
+}
+
+.calendar-calendar .month-view .full tr td.today, .calendar-calendar .month-view .full tr.odd td.today, .calendar-calendar .month-view .full tr.even td.today{
+      border-left: 2px solid #B13B24;
+    border-right: 2px solid #B13B24;
+}
+
+.calendar-calendar .month-view .full td.date-box.today {
+    border-top: 2px solid #B13B24;
+    border-right: 2px solid #B13B24;
+    border-left: 2px solid #B13B24;
+
+}
+
+#views-form-og-nodes-block-2{
+  float:right;
+}
+
+#block-block-20{
+  float: left;
+  p{
+    margin: 0;
+  }
+}
+
+/* edit module */
+
+#block-edit-edit .content a{
+  display: block;
+    background: url("../images/pen.png") no-repeat scroll 0 0 transparent;
+    height: 50px;
+    position: fixed;
+    right: 70px;
+    text-indent: -9999px;
+    top: 25px;
+    width: 50px;
+    z-index: 500;
+}
+
+.edit-toolbar-container, .edit-form-container{
+  float: left;
+  width: 500px;
+}
+
+
+/********** user cources *********/
+
+#block-views-user-courses-block{
+  td{
+    width: 20%;
+    float: right;
+  }
+  .views-field-title a{
+    text-align: center;
+    display: block;
+  }
+  img{
+    margin-right: 46px;
+  }
+}
+
+.field-name-og-user-node .field-label{
+  margin-bottom: 20px;
+}
+
+.field-name-og-user-node .field-item, {
+  h3{
+    font-size: 14px;
+    clear: both;
+    border: none;
+  }
+}
+
+#one{
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 204px;
+    height: 150px;
+    float: right;
+}
+
+.node-type-lesson #one{
+  height: 240px;
+  width: 160px;
+  margin-left: 64px;
+  margin-right: 0;
+  h3 a{
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+  }
+  h3{
+    margin: 0;
+  }
+  img{
+    margin-right: 30px;
+  }
+}
+.node-type-lesson{
+  .field-name-field-tatey-leson {
+    margin-right: 40px;
+    clear: both;
+  }
+}
+
+.field-name-field-image-profile{
+  clear: both;
+}
+
+.page-user table td{
+  padding: 10px;
+}
+
+/*   tachposot page  */
+
+#block-views-tachposot-block{
+  td{
+    float: right;
+    margin-bottom: 32px;
+    padding-left: 120px;
+  }
+  td.col-last{
+    padding-left: 0;
+  }
+  .views-field-title{
+    text-align: center;
+    width: 200px;
+
+  }
+  td.col-first{
+    margin-right: 44px;
+  }
+  .views-field-field-derug{
+    float: right;
+    margin-right: 55px;
+    text-align: center;
+
+  }
+  .views-field-edit-node{
+    clear: both;
+  }
+  .view-header{
+    margin-right: 44px;
+    a.login{
+    background-color: #87BCC1;
+    border-radius: 7px;
+    color: #FFFFFF;
+    display: block;
+    font-family: archiologregular;
+    font-size: 19px;
+    margin-left: -8px;
+    padding: 1px 12px; 
+    float: right; 
+    }
+  }
+  .view-content{
+    clear: both;
+    padding-top: 20px;
+  }
+  .views-field-value{
+    clear: both;
+    text-align: center;
+  }
+}
+
+ /* 
+  * teacher
+  *
+  ***********************************************************/
+
+.view-about-teacher{
+  .views-field-field-image-profile{
+    float: left;
+    margin-right: 20px;
+  }
+  .label{
+    float: right;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  .views-label{
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
+
+.page-node-edit .filter-wrapper{
+  display: none;
+}
+
+.page-node-edit .field-name-field-phone-teacher{
+  clear: both;
+}
+
+.page-node-edit .field-name-field-image-teacher{
+  float: right;
+}
+
+.field-name-field-phone-teacher, .field-name-field-mail-teacher{
+  height: 30px;
+}
+
+.node-type-teacher .field-name-body .field-items{
+  margin-top: -18px;
+}
+
+.page-node-edit.node-type-teacher label{
+  margin-top: 36px;
+}
+
+.cck-time-element{
+  margin-left: 800px;
+}
+
+.page-node-add-mikum-course .field-name-field-time-to label, .page-node-edit .field-name-field-time-to label{
+  clear: both;
+}
+
+.page-node-add-mikum-course .field-name-field-mikum, .page-node-edit .field-name-field-mikum{
+  margin-top: 43px;
+}
+
+.page-node-add-mikum-course .field-name-field-date-english .description, .page-node-edit .field-name-field-date-english .description,
+.page-node-add-mikum-course .field-name-field-english-mukdemet .description, .page-node-edit .field-name-field-english-mukdemet .description{
+    display: none;
+}
+
+#block-views-hadracha-block{
+  background: none!important;
+  height: 225px;
+  h2{
+    z-index: 100;
+    position: relative;
+  }
+  .content{
+    margin-top: -32px;
+  }
+}
+
+.field-name-field-register-user{
+  margin-top: 30px;
+}
